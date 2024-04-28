@@ -1,0 +1,288 @@
+From 69e9a528eab02f8749e6298ea7ca9050a597fea9 Mon Sep 17 00:00:00 2001
+From: Md Ahasan Habib Nahid <141475377+ahasan06@users.noreply.github.com>
+Date: Sat, 20 Apr 2024 10:44:03 +0600
+Subject: [PATCH] services ui changed
+
+---
+ myProject/db.sqlite3                          | Bin 266240 -> 266240 bytes
+ .../myApp/__pycache__/models.cpython-312.pyc  | Bin 5875 -> 5875 bytes
+ .../myApp/__pycache__/views.cpython-312.pyc   | Bin 18606 -> 18606 bytes
+ myProject/myApp/static/serproStyle.css        | 128 ++++++++++--------
+ .../myApp/templates/myApp/notification.html   |   2 +-
+ .../myApp/templates/myApp/serviceprofile.html |  32 +++--
+ 6 files changed, 92 insertions(+), 70 deletions(-)
+
+diff --git a/myProject/db.sqlite3 b/myProject/db.sqlite3
+index bfd1e196c7d09cd95e4a4bde9482eca621309a5e..8d35c1b026819502682144e24e2bc76e182ce226 100644
+GIT binary patch
+delta 1519
+zcma)6U2GIp6u$S)bf-I=*}Jq_8iedLhz6Q2cm8&E2EmpBmDV;3#Rh{(nRd7Aw%y%!
+zcMApDLLo6Rnh0*vQ6EU(d@)j8(s?M<_=J*}Xkr=?G>TD-K`U4jvB96a+k}>A)XC(Y
+zJLlf-obNk1b52kBPfz*JtwY@U^Xqrg_1(i#5YFW%f@?kF8#gem&>^p(0IVy_1#7qY
+zOpBP7rUx}mRaLq0V<HSI6(SMMl2uC%2X)0XLt5VGpRP77#juDLBwEPSOgnC8?UZKc
+z&-Yao`~w#@Z#lE+%tmin+u7$DWhI^K&m^)W6xWZ9^cmgJBXWPNKa?KnReF03E&s>l
+zrIzDLXs^}W9`8$K_lMhzq}H@&Z&zDa{a~ZfY<D(y4INAkv^0hG_4Mp-%|*2yg(zA*
+z(d&t}ik+sLhFX}PJb<KhI%#V0j2e%o636@OR8me3*(Z*M29KI2;&ENex4dy_Z?5MV
+ztAFRSUGeO}k$p+CW0(vL40bBRdSgd+q-p0aE!`1m-}8J=G82_;Gy5Q?D#<IAGBnvJ
+zG{1TCk-&fGJllNHZN3P_$eO=#c4L3S?*f%v*^8O2U%%90_r~y5Kp!P<`-9Fa0Tkp~
+zJ70b4^)Ha~K>%soZgcJ3U60SZ_XDWh&%7+$ayWuME*Ea$+rpCYgELQ17zvB6Pez|q
+zJXXed5t#EZ5Fv1-Xc%yL`D@mN+Y!Ui2-jS$0ePWMxGsDuT*JHZ)7TWgEXdN^6_d9Z
+zw&vjgXgL56W*r)UxYccF0oCy0BJc@5&WFU`#e3o+{vI#k1^kO6MNo}HB8YXv5%jqT
+zuNQ3pXK*dcc;R>%10fnKuFPm@e{$w9V*MV7?*V+z<p<FMuH;w<Avanl(weM3DEHK{
+zpm;KKj$$Z*LqHrCkBNg~LhKd~;otDj_%{B=k*3g$L#8N!`6=|C0J|uGLukE+K@iN1
+zm&}#1lDRxuGP5UVrV&dhizR@UT>dL`2RrZo#FSOk@g)w+?mN`IuE?5F!v^qR4&ZtG
+z4j#h++=976?ckzMtL8o6Q3z|>)2Ub`YEMg%L{Dxw6RR#?@#9r~+y|<hZJ620(o9uu
+z3Nv|s6~0NM-vIbN{uSTFH>j#_3u{ha#nq*nmD8JSX~&mVuX}eZQ$-8Hvw;7QpW;XO
+zef$=l#UJ5G+=-uXqy|QFNCU&V2O5|QJYqw%A_{vdIPL+P8oel)?oJHEq+C4Kn_F&s
+ztzI^ZZ7&l`4F}Dzt`i;1?HKcbrbdXe>12$`lM-1e8ndHPA|>_OndA{W7h4SvTe@ly
+zI!9E+ATsSndDH_o7xBaNAGM|KWFnhQq>em{QDuwJnIs!@*3j0~PkMk%G0Ai?E%he`
+z24YbuXJ>{I-4DZ*;)n`{<&de<RI|n2*-)|Ia1ll=7fuQLg_??mQiGp*a$*MuHmP1O
+z{72nkiG(de=!=Yr?Hp)Qy%7E%#i11-+A{GJ2R4_G%UV~YHql8&%e#_>LBWY_9FU8*
+Q|5fD!Uc5W~0uw3x1=t^zj{pDw
+
+delta 872
+zcmaiwOH30{6ozN+lxZ0{y;Csw2&N^(g(Q@FhiPY8VuT9v5^1%XfF>}cEiEljXa$65
+zP!=S{1<-_17o;wXJ3*&1iHQai6WEZrVqsXw1{XX6aiI%*3~C~Y3(w-@Jd*GH=O4>(
+zV;OGp1fZWx6?ygiyu<DwU#0Ijj?yC~C#fb<LDRrSma1<Y#g!J(BM2Uh9Zr#V2}s?J
+zN@PBE+p*-~u?I;Gw+l-cr^VQOA@X3CM?enDSGWZvN93g3E6C}o?gEvI&z>$Nh`S}Z
+zInCo&s&T3pxhr~uvJf41B|1eM3}d$x5@lCpaHKEJr@zm<Y)B5&dYqxy&3=3_9vTdE
+z^FDu1xZ4{}MPjY(srIV_)nd{uwKcT~LDyigfk(VhhMZ-n;;=YD#G<-7699HBh>4L{
+z1o6Yz84HG8{V0Y8l2JK^QLHBwN~IegW*d_A0Z*i_K776_5h{~f`duS_?+ve?kN35T
+zHBFbo$uhp{T#HZ>9S#O+TKtD^{x!;ZU{u|s^&__byg6Psr`64otk3$7W-auC{A9}~
+zmx}tAiUuyr;SgLR^x)Gn=TPq3fWvs<)OPNuw_SN_1A?*U_2cqL(+6$e2230^!IFv*
+zffWEZl{Ew;6U@SUY?ghXV*6&EMxFr_MNODDG-DOWC23d-&qBApd!MK1JERphgB@U@
+z+0TT<Y%y8@`;Gmo*nQxbf_%VqkZ4Wvfi+euUL?23=|#g+LkHk!f+Gl+)tCg>fm1%y
+z^r8tIY8NJffzzqi2=+ER#3tA%+o{+yU_n6{V9{1H;DwnSRb_4n{36Z+^qaV>F(1LM
+zPNb)Ib>cgX+5OWl8aNt?1YCvB;4Rn<8=<HcCrY5f%Fu*T38`{})kG6oFQn33f$kp-
+z*9o`<*Wo_=0{7sCY8_jFoPi=pCWj(Pkb6*?w7qhwK$prG2xghdFvE<WDOK!Ml%Sw0
+k%Ay6Ts96T&aJpsY99=7Q+&r%seN=@$7&L41*D0U+6GPbj7ytkO
+
+diff --git a/myProject/myApp/__pycache__/models.cpython-312.pyc b/myProject/myApp/__pycache__/models.cpython-312.pyc
+index 927e292bfcb87185d134dfa480327043c4ddcf0a..71d6bc51aa8a7634855fc34fef3e37ace9c1c7a2 100644
+GIT binary patch
+delta 20
+acmeyY`&pO!G%qg~0}%8bSK7$^LJR;#=LT#5
+
+delta 20
+acmeyY`&pO!G%qg~0}wn7mfgtxLJR;#cLquT
+
+diff --git a/myProject/myApp/__pycache__/views.cpython-312.pyc b/myProject/myApp/__pycache__/views.cpython-312.pyc
+index 55e87e0fa0b087cbf20e787fbb68decf7bf309eb..c779ddfa2aa0db46f9ccb8413c4f8bc4d83d3740 100644
+GIT binary patch
+delta 22
+ccmZ2Ck#XHbM()$Ryj%=Gpzo->k$bTR07#7mwEzGB
+
+delta 22
+ccmZ2Ck#XHbM()$Ryj%=G@HAL<Blltt08P~fcK`qY
+
+diff --git a/myProject/myApp/static/serproStyle.css b/myProject/myApp/static/serproStyle.css
+index 2a6416f..d255a6d 100644
+--- a/myProject/myApp/static/serproStyle.css
++++ b/myProject/myApp/static/serproStyle.css
+@@ -1,73 +1,87 @@
++/* Container */
+ *{
+-    margin: 0px;
+-    padding: 0px;
+-    box-sizing: border-box;
+-    font-family: 'Roboto', sans-serif;
++    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+-.serpro_container{
+-    width: 100%;
+-    height: 100vh;
+-    background-image: url(hbg.png);
+-    background-size: cover;
+-    background-position: center;
++.serpro-container {
++    min-height: 80vh;
+     display: flex;
+-    align-items: center;
+     justify-content: center;
++    background: #ece3e3;
++   
++    
+ }
+-.profile-box{
+-    background: #ff574a;
+-    text-align: center;
+-    padding: 40px 90px;
+-    color: #fff;
+-    position: relative;
+-    border-radius: 20px;
+-}
+-.profile-pic{
+-    width: 150px;
+-    border-radius: 50%;
+-    background: #fff;
+-    padding: 6px;
+-    margin-top: 40px;
++
++/* Profile box */
++.profile-box {
++    max-width: 800px;
++    background-color: #fcfcfc;
++    border-radius: 10px;
++    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
++    padding: 20px;
++    display: flex;
++    flex-direction: column;
++    margin: 10vw 0;
+ }
+-.socialIcons{
++
++/* Profile content */
++.profile-content {
+     display: flex;
+-    justify-content: center;
++    justify-content: space-between;
++    align-items: center;
+ }
+-.socialIcons a{
+-    text-decoration: none;
+-    padding: 5px;
+-    background-color: transparent;
+-    margin: 2px;
+-    border-radius: 50%;
++
++/* Profile info */
++.profile-info {
++    flex: 1;
+ }
+-.socialIcons a i{
+-    font-size: 1.5em;
+-    color: white;
+-    opacity: 0.9;
++
++/* Profile image */
++.profile-image {
++    flex: 1;
++    margin-left: 20px;
++    height: 200px;
+ }
+-.socialIcons a:hover{
+-    background-color: gray;
+-    transition: 0.5s;
++
++/* Profile picture */
++.profile-pic {
++  width: 100%;
++  height: 100%;
++  border-radius:10px ;
++  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
++  -webkit-border-radius:10px ;
++  -moz-border-radius:10px ;
++  -ms-border-radius:10px ;
++  -o-border-radius:10px ;
+ }
+-.socialIcons a:hover i{
++
++/* Contact button */
++button {
++    background-color: red;
+     color: white;
+-    transition: 0.5s;
+-}
+-.profile-box button{
+-    background: #fff;
+-    color: #ff574b;
+     border: none;
+-    outline: none;
+-    box-shadow: 0 5px 10px rgba(244, 67, 54, 0.5);
+-    padding: 15px 60px;
++    padding: 10px 20px;
+     cursor: pointer;
+-    border-radius: 30px;
+-    margin-bottom: -50px;
+-    font-weight: 600;
+-    font-size: 16px;
++    border-radius: 5px;
++    transition: background-color 0.3s;
++}
++
++button:hover {
++    background-color: #0056b3;
+ }
+-.profile-box h3{
+-    font-size: 22px;
++
++/* Social share */
++.social-share {
+     margin-top: 20px;
+-    font-weight: 500;
+-}
+\ No newline at end of file
++}
++
++/* Social icons */
++.social-icons a {
++    color: #007bff;
++    text-decoration: none;
++    margin-right: 10px;
++    font-size: 20px;
++}
++
++.social-icons a:hover {
++    color: #0056b3;
++}
+diff --git a/myProject/myApp/templates/myApp/notification.html b/myProject/myApp/templates/myApp/notification.html
+index 2b43e87..b057047 100644
+--- a/myProject/myApp/templates/myApp/notification.html
++++ b/myProject/myApp/templates/myApp/notification.html
+@@ -10,7 +10,7 @@
+ </style>
+ {% endblock %}
+ {% block content %}
+-<div class="container noti_container">
++<div class="container">
+     <div class="notificationContainer">
+         <header>
+             <div class="notificationHeader">
+diff --git a/myProject/myApp/templates/myApp/serviceprofile.html b/myProject/myApp/templates/myApp/serviceprofile.html
+index 83423dd..1d95c11 100644
+--- a/myProject/myApp/templates/myApp/serviceprofile.html
++++ b/myProject/myApp/templates/myApp/serviceprofile.html
+@@ -4,20 +4,28 @@
+ <link rel="stylesheet" href="{% static 'serproStyle.css' %}">
+ {% endblock %}
+ {% block content %}
+-<div class="container serpro_container">
++<div class="container serpro-container">
+     <div class="profile-box">
+-        <img src="{{ service.image.url }}" class="profile-pic">
+-        <h3>{{ service.service_type }}</h3>
+-        <p>{{ service.description }}</p>
+-        <div class="socialIcons">
+-            <a href="https://www.facebook.com/UAPBDDhaka/"><i class="fa-brands fa-facebook"></i></a>
+-            <a href="https://www.linkedin.com/company/uapbd/"><i class="fa-brands fa-linkedin"></i></a>
+-            <a href="https://www.youtube.com/channel/UCs_tflvCGMhbWT5FqhXXfig"><i class="fa-brands fa-youtube"></i></a>
++        <div class="profile-content">
++            <div class="profile-info">
++                <h2>{{ service.service_type }}</h2>
++                <p>{{ service.description }}</p>
++                <p><strong>Contact Information:</strong> {{ service.contact_information }}</p>
++                <p><strong>Availability:</strong> {{ service.availability }}</p>
++            </div>
++            <div class="profile-image">
++                <img src="{{ service.image.url }}" class="profile-pic">
++                <a href="mailto:{{ service.email }}"><button type="button">Contact Service</button></a>
++            </div>
++        </div>
++        <div class="social-share">
++            <h3>Share:</h3>
++            <div class="social-icons">
++                <a href="https://www.facebook.com/UAPBDDhaka/"><i class="fab fa-facebook-f"></i></a>
++                <a href="https://www.linkedin.com/company/uapbd/"><i class="fab fa-linkedin"></i></a>
++                <a href="https://www.youtube.com/channel/UCs_tflvCGMhbWT5FqhXXfig"><i class="fab fa-youtube"></i></a>
++            </div>
+         </div>
+-        
+-            <a href="mailto:{{ service.email }}"><button type="button">Send Email</button></a>
+     </div>
+ </div>
+ {% endblock %}
+-
+-
+-- 
+2.44.0.windows.1
+
